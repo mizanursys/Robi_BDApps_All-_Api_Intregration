@@ -72,14 +72,6 @@
                         android:text="শুধুমাত্র রবি এবং এয়ারটেল গ্রাহকদের জন্য"
                         android:textSize="10sp" />
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:visibility="gone"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-                    </com.google.android.material.textfield.TextInputLayout>
 
                 </LinearLayout>
 
@@ -91,9 +83,9 @@
 
                     <Button
                         android:id="@+id/button_s_daily"
-                        style="@style/Widget.AppCompat.Button.Colored"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:background="#3D50B6"
                         android:layout_gravity="end"
                         android:gravity="center"
                         android:text="সাবস্ক্রাইব"
@@ -116,27 +108,7 @@
                 android:paddingRight="5dp">
 
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_gravity="center"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <EditText
-                            android:background="#eee"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="phone"
-                            android:hint="মোবাইল"/>
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -161,8 +133,8 @@
             <Button
                 android:visibility="gone"
                 android:layout_marginTop="10dp"
-                style="@style/Widget.AppCompat.Button.Colored"
                 android:id="@+id/bt_send_sms"
+                android:background="#4CAF50"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="অথবা এসএমএস পাঠান" />
@@ -222,45 +194,65 @@
                 </LinearLayout>
             </LinearLayout>
 
-
-
             <Button
                 android:layout_marginTop="10dp"
-                android:id="@+id/video_ad"
+                android:id="@+id/submit_code"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#9BCDED"
                 android:text="কোড দিন" />
 
             <LinearLayout
                 android:id="@+id/ll_hide"
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:visibility="visible"
                 android:orientation="horizontal">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="1">
+
 
                     <EditText
+
                         android:id="@+id/otp_code"
                         android:layout_width="match_parent"
-                        android:layout_height="25dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:layout_gravity="center"
                         android:background="@null"
                         android:hint="Type OTP Code" />
-                </com.google.android.material.textfield.TextInputLayout>
 
                 <Button
-                    android:id="@+id/submit_code"
+                    android:id="@+id/otp_submit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="#DA0F62A5"
+                    android:textColor="#FDFDFD"
                     android:text="সাবমিট" />
 
             </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="#8EBA5B"
+                android:orientation="horizontal">
 
+                <Button
+                    android:id="@+id/ussd_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:textColor="#FAFAFA"
+                    android:text="কল করুন" />
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/ic_baseline_call_24"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
